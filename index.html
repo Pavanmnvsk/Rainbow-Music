@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="icon" href="source/rainbow.png" type="image/gif" sizes="16x16">
+    <title>Rainbow Music</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-color: #3f3f3f;
+            font-family: Open-sans;
+        }
+        .main{
+          padding: 40px 0;
+        }
+        .col-md-3{
+          margin-bottom: 40px;
+        }
+        h1{
+          padding-left: 40px;
+          font-family:"Sofia", sans-serif;
+          padding-top: 40px;
+        }
+        .album-poster{
+          position: relative;
+          display: block;
+          border-radius: 7px;
+          overflow: hidden;
+          box-shadow: 0 15px 35px #3d2173a1;
+          transition: all ease 0.4s;
+        }
+        .album-poster:hover{
+          box-shadow: none;
+          transform: scale(0.98) translateY(5px);
+        }
+        h3{
+          font-size: 34px;
+          margin-bottom: 34px;
+          border-bottom: 4px solid #e6e6e6;
+          padding-bottom: 15px;
+          color: #fff;
+        }
+        p{
+          font-size: 15px;
+          color: #fff;
+
+        }
+        h4{
+          font-size: 16px;
+          font-family: "Sofia", sans-serif;
+          margin-top: 15px;
+          font-weight: 300;
+          color: #fff;
+
+        }
+        .music{
+          width: 30%;
+          height: 30%;
+          padding-top: 30px;
+        }
+        .music:hover{
+          box-shadow: none;
+          transform: scale(0.98) translateY(5px);
+        }
+         
+        #aplayer{
+          position: fixed;
+          bottom: -100%;
+          left:0;
+          width:100%;
+          margin: 0;
+          box-shadow: 0 2px 2px;
+          background-color: #fff;
+          transition: all ease 0.5s;
+        }
+        #aplayer.showPlayer{
+          bottom: 0;
+        }
+       
+        span{
+          color:#000 !important;
+          font-size: 16px;
+        }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded{
+          background:#e0e0e0 ;
+          height: 4px;
+        }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{
+           height: 4px;
+           background-color: #2196f3 !important;
+        }
+        .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{
+          background-color: #2196f3 !important;
+        }
+
+    </style>
+  </head>
+  <body>
+    
+
+ 
+      <nav class="navbar  bg-dark navbar-dark navbar-dark sticky-top">
+        <!-- Brand -->
+        <div class="navbar-brand">
+          <img src="source/rainbow.png" width=60px style="padding-left: 25px;" onClick="document.location.reload(true)">
+          <a class="navbar-brand" href="#" style="padding-left: 10px;" class="navbar-toggler"  data-toggle="collapse" data-target="#collapsibleNavbar">Rainbow Music</a>
+        </div>
+        
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="padding-left: 30px;">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="padding-left: 30px;">Downloads</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="padding-left: 30px;" onclick="myFunction()">Log Out</a>
+            </li>
+          </ul>
+        </div>
+      </nav>   
+      <script>
+        function myFunction() {
+          location.replace("https://www.google.com")
+        }
+        </script>
+
+      <img class="music" type="image" value="Reload Page" onClick="document.location.reload(true)" src="source/Music.png">
+
+
+     <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                     <h3>New Releases</h3>
+                </div>
+                <div class="col-md-3">
+                  <a href="javascript:void();"class="album-poster" data-switch="0">
+                     <img src=https://static.toiimg.com/thumb/msid-76894589,width-1200,height-900,resizemode-4/.jpg" style="width:275px;height:200px;" alt="No">
+                  </a>
+                  <h4>ButtaBomma</h4>
+                  <p>Ala Vakiuntapuram-2020</p>
+                </div>
+                <div class="col-md-3">
+                  <a href="#"class="album-poster" data-switch="1">
+                     <img src="https://mcmscache.epapr.in/post_images/website_197/post_21391449/6049e8108d749.jpg" style="width:275px;height:200px;" alt="No">
+                  </a>
+                  <h4>Chitti Ne navvu antae</h4>
+                  <p>Jathiratnalu-2020</p>
+                </div>
+                <div class="col-md-3">
+                  <a href="#"class="album-poster" data-switch="2">
+                     <img src="https://www.tollywood.net/wp-content/uploads/2020/01/Ala-Vaikunthapurramuloo-4-days-Telugu-States-Collections.jpg" style="width:275px;height:200px;" alt="No">
+                  </a>
+                  <h4>Samajavaragamana</h4>
+                  <p>Ala Vakiuntapuram-2020</p>
+                </div>
+                <div class="col-md-3">
+                  <a href="#"class="album-poster" data-switch="3">
+                     <img src="https://cdn.123telugu.com/content/wp-content/uploads/2021/04/VakeelSaab-m.jpg" style="width:275px;height:200px;" alt="No">
+                  </a>
+                  <h4>Sathyameva Jayathe</h4>
+                  <p>Vakeel Saab-2020</p>
+                </div>
+                <div class="col-md-3">
+                  <a href="#"class="album-poster" data-switch="4">
+                     <img src="https://assets.thehansindia.com/h-upload/2021/04/29/1073267-love-story.webp" style="width:275px;height:200px;" alt="No">
+                  </a>
+                  <h4> Ay Pilla</h4>
+                  <p>Love Story-2020</p>
+                </div>
+                <div class="col-md-3">
+                  <a href="#"class="album-poster" data-switch="5">
+                     <img src="https://www.quirkybyte.com/wp-content/uploads/2021/04/12-17-780x470.jpg" style="width:265px;height:200px;" alt="No">
+                  </a>
+                  <h4>Nee Kannu Neli Samudram</h4>
+                  <p>Uppena-2020</p>
+                </div>
+                <div class="col-md-3">
+                  <a href="#"class="album-poster" data-switch="6">
+                     <img src="https://i.ytimg.com/vi/Qf4MumY9fXk/maxresdefault.jpg" style="width:265px;height:200px;" alt="No">
+                  </a>
+                  <h4> Arerey Manasa</h4>
+                  <p>Falaknama Das-2020</p>
+                </div>
+                <div class="col-md-3">
+                  <a href="#"class="album-poster" data-switch="7">
+                     <img src="https://lyricsraag.com/wp-content/uploads/2020/12/chitti-story-song-lyrics-English-1280x720.jpg" style="width:275px;height:200px;" alt="No">
+                  </a>
+                  <h4>Vaathi Coming</h4>
+                  <p>Master-2020</p>
+                </div>
+            </div>
+    
+             <div class="row">
+                 <div class="co-md-12">
+                      <h3>ChartBusters</h3>
+                 </div>
+                 <div class="col-md-2">
+                    <a href="#" class="album-poster" data-switch="8">
+                      <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" style="width:168px;height:200px;">
+                    </a>      
+                     <h4>Gym Class Heros</h4>              
+                 </div>
+                 <div class="col-md-2">
+                  <a href="#" class="album-poster" data-switch="9">
+                    <img src="https://assets.podomatic.net/ts/9d/f8/b7/playlifepodcast/640x640_14558257.jpg?1610271388" style="width:168px;height:200px;">
+                  </a>      
+                   <h4>Kabir Singh</h4>              
+               </div>
+               <div class="col-md-2">
+                <a href="#" class="album-poster" data-switch="10">
+                  <img src="https://m.media-amazon.com/images/I/81dkd7-ah4L._SS500_.jpg" style="width:168px;height:200px;">
+                </a>      
+                 <h4>Alan Walker</h4>              
+             </div>
+             <div class="col-md-2">
+              <a href="#" class="album-poster" data-switch="11">
+                <img src="https://im.rediff.com/movies/2016/mar/09tweet1.jpg" style="width:168px;height:200px;">
+              </a>      
+               <h4>M.S.Dhoni</h4>              
+           </div>
+           <div class="col-md-2">
+            <a href="#" class="album-poster" data-switch="12">
+              <img src="https://m.media-amazon.com/images/I/71yG-jNVeuL._SS500_.jpg" style="width:168px;height:200px;">
+            </a>      
+             <h4>Control</h4>              
+         </div>
+         <div class="col-md-2">
+          <a href="#" class="album-poster" data-switch="13">
+            <img src="https://a10.gaanacdn.com/gn_img/albums/d41WjnWPLq/41Wjz1LOWP/size_xxl.webp" style="width:168px;height:200px;">
+          </a>      
+           <h4>Aashiqui 2</h4>              
+       </div>
+             </div>
+
+        </div>
+    </div>
+
+    <div id="aplayer"></div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+  
+    <script>
+
+        $(".album-poster").on('click',function(e){
+          var dataSwitchId=$(this).attr('data-switch');
+          ap.list.switch(dataSwitchId);
+         
+          ap.play();
+          $("#aplayer").addClass('showPlayer');
+        });     
+
+
+
+          const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    listFolded:true,
+    audio: [
+      {
+        name: 'Buttabomma',
+        artist: 'Artist',
+        url: 'source/ButtaBomma.mp3',
+        cover: 'https://static.toiimg.com/thumb/msid-73150937,width-1200,height-900,resizemode-4/.jpg'
+    },
+    {
+        name: 'Chitti ne navvuantae',
+        artist: 'Artist',
+        url: 'source/Chitti.mp3',
+        cover: 'https://mcmscache.epapr.in/post_images/website_197/post_21391449/6049e8108d749.jpg'
+    },
+    {
+        name: 'Samajavaragamana',
+        artist: 'Artist',
+        url: 'source/Samajavaragamana.mp3',
+        cover: 'https://www.tollywood.net/wp-content/uploads/2020/01/Ala-Vaikunthapurramuloo-4-days-Telugu-States-Collections.jpg'
+    },
+    {
+        name: 'Sathyameva Jayathe',
+        artist: 'Artist',
+        url: 'source/Sathyameva Jayathe.mp3',
+        cover: 'https://cdn.123telugu.com/content/wp-content/uploads/2021/04/VakeelSaab-m.jpg'
+    },
+    {
+        name: ' Ay Pilla',
+        artist: 'Artist',
+        url: 'source/Ay Pilla.mp3',
+        cover: 'https://assets.thehansindia.com/h-upload/2021/04/29/1073267-love-story.webp'
+    },
+    {
+        name: 'Nee Kannu Neli Samudram',
+        artist: 'Artist',
+        url: 'source/Nee.mp3',
+        cover: 'https://www.quirkybyte.com/wp-content/uploads/2021/04/12-17-780x470.jpg'
+    },
+    {
+        name: 'Arerey Manasa',
+        artist: 'Artist',
+        url: 'source/Arerey Manasa.mp3',
+        cover: 'https://i.ytimg.com/vi/Qf4MumY9fXk/maxresdefault.jpg'
+    },
+    {
+        name: 'Vaathi Coming',
+        artist: 'Artist',
+        url: 'source/Master Coming.mp3',
+        cover: 'https://lyricsraag.com/wp-content/uploads/2020/12/chitti-story-song-lyrics-English-1280x720.jpg.jpg'
+    },
+    {
+        name: 'Gym Class Heros',
+        artist: 'Artist',
+        url: 'source/Gym.mp3',
+        cover: 'https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'
+    },
+    {
+        name: 'Bekhayali',
+        artist: 'Artist',
+        url: 'source/Bekhayali.mp3',
+        cover: 'https://assets.podomatic.net/ts/9d/f8/b7/playlifepodcast/640x640_14558257.jpg?1610271388'
+    },
+    {
+        name: 'Faded',
+        artist: 'Artist',
+        url: 'source/Faded.mp3',
+        cover: 'https://m.media-amazon.com/images/I/81dkd7-ah4L._SS500_.jpg'
+    },
+    {
+        name: 'Jab Tak',
+        artist: 'Artist',
+        url: 'source/jabtak.mp3',
+        cover: 'https://im.rediff.com/movies/2016/mar/09tweet1.jpg'
+    },
+    {
+        name: 'Control',
+        artist: 'Artist',
+        url: 'source/control.mp3',
+        cover: 'https://m.media-amazon.com/images/I/71yG-jNVeuL._SS500_.jpg'
+    },
+    {
+        name: 'Tum Hi Ho',
+        artist: 'Artist',
+        url: 'source/tumhiho.mp3',
+        cover: 'https://a10.gaanacdn.com/gn_img/albums/d41WjnWPLq/41Wjz1LOWP/size_xxl.webp'
+    },
+  ]
+});
+
+    </script>
+  </body>
+</html>
